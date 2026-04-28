@@ -1,0 +1,22 @@
+services:
+  service-a:
+    build: ./python/service-a
+    image: sonu6957/service-taxcalculator
+    depends_on:
+      - service-b
+    ports:
+      - "3007:3000"
+  
+  service-b:
+    build: ./python/service-b
+    image: sonu6957/service-taxdataproducer
+    ports:
+      - "3002:4000"
+  service-frontend:
+    build: ./tax-calculator-frontend
+    image: sonu6957/service-taxcalculator_frontend
+    ports: 
+      - "5173:80"
+    depends_on:
+      - service-a
+    
