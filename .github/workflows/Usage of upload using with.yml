@@ -1,0 +1,22 @@
+name: Usage of upload in workflow
+
+on: workflow_dispatch
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: Writitng a "Hello" statement to a file
+              run: echo"Hello from a file input" > hello.txt
+
+            - name: Upload the file
+              uses: actions/upload-artifact@v7
+              with:
+                name: demo-file
+                path: .
+
+
+
+
+        
+
