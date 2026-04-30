@@ -1,4 +1,4 @@
-name: CI for a sprintboot application
+name: CI for a springboot application
 
 on:
     workflow_dispatch
