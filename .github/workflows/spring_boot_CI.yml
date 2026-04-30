@@ -53,8 +53,9 @@ jobs:
             - name: push to Dockerhub
               uses: docker/build-push-action@v7
               with:
+                context: docker/app1-hello/python/Dockerfile
                 push: true
-                tags: ${{github.actor}}/spring-app:latest 
+                tags: ${{secrets.DOCKERHUB_USERNAME}}/spring-app:latest 
         
 
         
