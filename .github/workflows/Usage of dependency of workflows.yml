@@ -1,4 +1,4 @@
-name: Usage of dependency between 
+name: Usage of dependency between workflow
 on: workflow_dispatch
 jobs:
     build:
